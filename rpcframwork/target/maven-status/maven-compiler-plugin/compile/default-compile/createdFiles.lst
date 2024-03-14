@@ -1,8 +1,12 @@
 com\TJJ\rpc\model\RpcResponse$RpcResponseBuilder.class
+com\TJJ\rpc\config\RpcConfig.class
+com\TJJ\rpc\RpcApplication.class
 com\TJJ\App.class
 com\TJJ\rpc\model\RpcRequest.class
 com\TJJ\rpc\model\RpcResponse.class
+com\TJJ\rpc\constant\RpcConstant.class
 com\TJJ\rpc\registry\LocalRegistry.class
+com\TJJ\rpc\utils\ConfigUtils.class
 com\TJJ\rpc\model\RpcRequest$RpcRequestBuilder.class
 com\TJJ\rpc\proxy\ServiceProxy.class
 com\TJJ\rpc\proxy\ServiceProxyFactory.class

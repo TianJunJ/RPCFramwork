@@ -4,7 +4,7 @@
 
   <groupId>com.TJJ</groupId>
   <artifactId>example-consumer</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>2.0</version>
   <packaging>jar</packaging>
 
   <name>example-consumer</name>
@@ -29,18 +29,17 @@
     <dependency>
       <groupId>cn.hutool</groupId>
       <artifactId>hutool-all</artifactId>
-      <version>5.8.26</version>
+      <version>5.8.16</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.24</version>
+      <version>1.18.30</version>
     </dependency>
       <dependency>
           <groupId>com.TJJ</groupId>
           <artifactId>rpcframwork</artifactId>
-          <version>1.0-SNAPSHOT</version>
-          <scope>compile</scope>
+          <version>3.1</version>
       </dependency>
   </dependencies>
 </project>
