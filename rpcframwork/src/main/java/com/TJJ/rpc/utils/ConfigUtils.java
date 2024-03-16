@@ -21,7 +21,6 @@ public class ConfigUtils {
 
     /**
      * 加载配置对象，并且支持区分环境
-     *
      * @param tClass
      * @param prefix
      * @param environment

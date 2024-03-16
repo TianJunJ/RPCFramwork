@@ -1,5 +1,7 @@
 package com.TJJ.rpc.proxy;
 
+import com.TJJ.rpc.RpcApplication;
+
 import java.lang.reflect.Proxy;
 
 /**
@@ -15,9 +17,23 @@ public class ServiceProxyFactory {
      * @return
      */
     public static <T> T getProxy(Class<T> serviceClass) {
+
+        //先判断是否需要模拟数据
+        if (RpcApplication.getRpcConfig().getMock()) {
+            return getMockProxy(serviceClass);
+        }
+
         return (T) Proxy.newProxyInstance(
                 serviceClass.getClassLoader(),
                 new Class[]{serviceClass},
                 new ServiceProxy());
+    }
+
+    public static <T> T getMockProxy(Class<T> serviceClass) {
+        return (T) Proxy.newProxyInstance(
+                serviceClass.getClassLoader(),
+                new Class[]{serviceClass},
+                new MockServiceProxy()
+        );
     }
 }
