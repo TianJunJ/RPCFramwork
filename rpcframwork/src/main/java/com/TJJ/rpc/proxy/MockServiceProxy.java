@@ -13,7 +13,7 @@ public class MockServiceProxy implements InvocationHandler {
 
     /**
      * 调用代理
-     *
+     * 函数注入
      * @return
      * @throws Throwable
      */

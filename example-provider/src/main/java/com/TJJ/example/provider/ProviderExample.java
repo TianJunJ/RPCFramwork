@@ -5,7 +5,10 @@ import com.TJJ.rpc.registry.LocalRegistry;
 import com.TJJ.rpc.server.HttpServer;
 import com.TJJ.rpc.server.VertxHttpServer;
 import com.tangtianj.example.common.service.UserService;
-//扩展读取配置文件后的 provider
+/**
+ * 扩展读取配置文件后的 provider
+ * 本文件是基于EasyProviderExample文件开发的复杂RPC框架
+ */
 public class ProviderExample {
     public static void main(String[] args) {
         //框架初始化

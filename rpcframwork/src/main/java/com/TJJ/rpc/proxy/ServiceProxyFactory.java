@@ -29,6 +29,10 @@ public class ServiceProxyFactory {
                 new ServiceProxy());
     }
 
+    /**
+     * 生成mock服务实例
+     * MockServiceProxy是自定义函数，用于注入
+     */
     public static <T> T getMockProxy(Class<T> serviceClass) {
         return (T) Proxy.newProxyInstance(
                 serviceClass.getClassLoader(),

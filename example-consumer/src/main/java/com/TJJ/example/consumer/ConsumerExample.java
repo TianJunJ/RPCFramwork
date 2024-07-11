@@ -8,6 +8,7 @@ import com.tangtianj.example.common.service.UserService;
 
 /**
  * 进行读取配置 扩展后的测试文件
+ * 本文件是基于EasyConsumerExample文件开发的复杂RPC框架
  */
 public class ConsumerExample {
     public static void main(String[] args) {
@@ -18,6 +19,7 @@ public class ConsumerExample {
 //        System.out.println(rpc);
 
         //测试Mock
+        //可直接获取mock服务的函数
         UserService userService = ServiceProxyFactory.getProxy(UserService.class);
         User user = new User();
         user.setName("tianjunjie1");
