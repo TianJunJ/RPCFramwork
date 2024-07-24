@@ -13,13 +13,6 @@ import com.tangtianj.example.common.service.UserService;
 public class ConsumerExample {
     public static void main(String[] args) {
 
-
-        //测试消费者能否通过配置文件获取配置信息
-//        RpcConfig rpc = ConfigUtils.loadConfig(RpcConfig.class,"rpc");
-//        System.out.println(rpc);
-
-        //测试Mock
-        //可直接获取mock服务的函数
         UserService userService = ServiceProxyFactory.getProxy(UserService.class);
         User user = new User();
         user.setName("tianjunjie1");
@@ -29,12 +22,12 @@ public class ConsumerExample {
         } else {
             System.out.println("user==null");
         }
-        short num = userService.getNum();
-        System.out.println(num);
-
-        char aChar = userService.getChar();
-        System.out.println(aChar);
-
+        //当mock=false时，不要调用模拟接口
+//        short num = userService.getNum();
+//        System.out.println(num);
+//
+//        char aChar = userService.getChar();
+//        System.out.println(aChar);
 
     }
 }

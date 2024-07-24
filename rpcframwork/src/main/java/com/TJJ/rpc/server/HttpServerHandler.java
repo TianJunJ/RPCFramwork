@@ -1,9 +1,11 @@
 package com.TJJ.rpc.server;
+import com.TJJ.rpc.RpcApplication;
 import com.TJJ.rpc.model.RpcRequest;
 import com.TJJ.rpc.model.RpcResponse;
 import com.TJJ.rpc.registry.LocalRegistry;
 import com.TJJ.rpc.serializer.JdkSerializer;
 import com.TJJ.rpc.serializer.Serializer;
+import com.TJJ.rpc.serializer.SerializerFactory;
 import io.vertx.core.Handler;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.http.HttpServerRequest;
@@ -20,10 +22,9 @@ import java.lang.reflect.Method;
 public class HttpServerHandler  implements Handler<HttpServerRequest> {
     @Override
     public void handle(HttpServerRequest request) {
-        System.out.println("111111111111111");
+        System.out.println("前端开始处理请求");
         // 指定序列化器
-        final Serializer serializer = new JdkSerializer();
-
+        final Serializer serializer = SerializerFactory.getInstance(RpcApplication.getRpcConfig().getSerializer());
         // 记录日志
         System.out.println("Recieved request:  " + request.method() + " " + request.uri());
 

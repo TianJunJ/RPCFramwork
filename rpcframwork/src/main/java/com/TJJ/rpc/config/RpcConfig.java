@@ -1,5 +1,6 @@
 package com.TJJ.rpc.config;
 
+import com.TJJ.rpc.serializer.SerializerKeys;
 import lombok.Data;
 
 /**
@@ -29,8 +30,13 @@ public class RpcConfig {
     private Integer serverPort = 8087;
 
     /**
-     *是否调用模拟接口
+     * 是否调用模拟接口
      */
     private Boolean mock = false;
+
+    /**
+     * 序列化器配置
+     */
+    private String serializer = SerializerKeys.JDK;
 
 }

@@ -2,10 +2,12 @@ package com.TJJ.example.consumer;
 
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
+import com.TJJ.rpc.RpcApplication;
 import com.TJJ.rpc.model.RpcRequest;
 import com.TJJ.rpc.model.RpcResponse;
 import com.TJJ.rpc.serializer.JdkSerializer;
 import com.TJJ.rpc.serializer.Serializer;
+import com.TJJ.rpc.serializer.SerializerFactory;
 import com.tangtianj.example.common.model.User;
 import com.tangtianj.example.common.service.UserService;
 
@@ -18,7 +20,7 @@ public class UserServiceProxy implements UserService {
 
     public User getUser(User user) {
         // 指定序列化器
-        Serializer serializer = new JdkSerializer();
+        Serializer serializer = SerializerFactory.getInstance(RpcApplication.getRpcConfig().getSerializer());
 
         // 发请求
         RpcRequest rpcRequest = RpcRequest.builder()

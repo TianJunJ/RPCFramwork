@@ -2,6 +2,9 @@ package com.TJJ.rpc.serializer;
 
 import java.io.*;
 
+/**
+ * 自定义的序列化器
+ */
 public class JdkSerializer implements Serializer {
     /**
      * 序列化
