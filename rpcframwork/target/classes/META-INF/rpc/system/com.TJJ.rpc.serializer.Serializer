@@ -3,6 +3,3 @@ hessian=com.TJJ.rpc.serializer.HessianSerializer
 json=com.TJJ.rpc.serializer.JsonSerializer
 kryo=com.TJJ.rpc.serializer.KryoSerializer
 
-a=com.TJJ.rpc.serializer.JdkSerializer
-b=com.TJJ.rpc.serializer.HessianSerializer
-e=com.TJJ.rpc.serializer.HessianSerializer

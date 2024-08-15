@@ -1,7 +1,10 @@
 package com.TJJ.rpc;
 
+import com.TJJ.rpc.config.RegistryConfig;
 import com.TJJ.rpc.config.RpcConfig;
 import com.TJJ.rpc.constant.RpcConstant;
+import com.TJJ.rpc.registry.Registry;
+import com.TJJ.rpc.registry.RegistryFactory;
 import com.TJJ.rpc.utils.ConfigUtils;
 import lombok.extern.slf4j.Slf4j;
 
@@ -23,6 +26,11 @@ public class RpcApplication {
     public static void init(RpcConfig newRpcConfig) {
         rpcConfig = newRpcConfig;
         log.info("rpc-framework start init,config={}", newRpcConfig.toString());
+        //注册中心初始化
+        RegistryConfig registryConfig = rpcConfig.getRegistryConfig();
+        Registry registry = RegistryFactory.getInstance(registryConfig.getRegistry());
+        registry.init(registryConfig);
+        log.info("registry init, config = {}", registryConfig);
     }
 
     /**

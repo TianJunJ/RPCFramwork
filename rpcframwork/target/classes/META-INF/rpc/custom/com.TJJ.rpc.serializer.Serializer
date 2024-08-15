@@ -1,3 +1,4 @@
-c=com.TJJ.rpc.serializer.JsonSerializer
-d=com.TJJ.rpc.serializer.KryoSerializer
-e=com.TJJ.rpc.serializer.JsonSerializer
+jdk=com.TJJ.rpc.serializer.JdkSerializer
+hessian=com.TJJ.rpc.serializer.HessianSerializer
+json=com.TJJ.rpc.serializer.JsonSerializer
+kryo=com.TJJ.rpc.serializer.KryoSerializer

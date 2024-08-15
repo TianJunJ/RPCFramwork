@@ -1,7 +1,12 @@
 package com.TJJ.example.provider;
 
 import com.TJJ.rpc.RpcApplication;
+import com.TJJ.rpc.config.RegistryConfig;
+import com.TJJ.rpc.config.RpcConfig;
+import com.TJJ.rpc.model.ServiceMetaInfo;
 import com.TJJ.rpc.registry.LocalRegistry;
+import com.TJJ.rpc.registry.Registry;
+import com.TJJ.rpc.registry.RegistryFactory;
 import com.TJJ.rpc.server.HttpServer;
 import com.TJJ.rpc.server.VertxHttpServer;
 import com.tangtianj.example.common.service.UserService;
@@ -11,13 +16,31 @@ import com.tangtianj.example.common.service.UserService;
  */
 public class ProviderExample {
     public static void main(String[] args) {
-        //框架初始化
+        // RPC 框架初始化
         RpcApplication.init();
-        //注册服务
-        LocalRegistry.register(UserService.class.getName(),UserServiceImpl.class);
-        //提供服务
+
+        // 注册服务
+        String serviceName = UserService.class.getName();
+        LocalRegistry.register(serviceName, UserServiceImpl.class);
+
+        // 注册服务到注册中心
+        RpcConfig rpcConfig = RpcApplication.getRpcConfig();
+        RegistryConfig registryConfig = rpcConfig.getRegistryConfig();
+        Registry registry = RegistryFactory.getInstance(registryConfig.getRegistry());
+        ServiceMetaInfo serviceMetaInfo = new ServiceMetaInfo();
+        serviceMetaInfo.setServiceName(serviceName);
+        serviceMetaInfo.setServiceHost(rpcConfig.getServerHost());
+        serviceMetaInfo.setServicePort(rpcConfig.getServerPort());
+        try {
+            registry.register(serviceMetaInfo);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        // 启动 web 服务
         HttpServer httpServer = new VertxHttpServer();
-        httpServer.doStart(8083);
+        httpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
     }
 
 }
+

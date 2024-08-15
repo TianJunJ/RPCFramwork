@@ -37,4 +37,8 @@ public class ConfigUtils {
         //todo 可以利用snakeYaml来完成对yaml、yml文件的读取
         return props.toBean(tClass, prefix);
     }
+
+
+
 }
+

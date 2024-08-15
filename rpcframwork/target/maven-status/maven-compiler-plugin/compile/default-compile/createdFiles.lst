@@ -1,12 +1,17 @@
 com\TJJ\rpc\model\RpcResponse$RpcResponseBuilder.class
 com\TJJ\App.class
 com\TJJ\rpc\serializer\HessianSerializer.class
+com\TJJ\rpc\registry\RegistryFactory.class
 com\TJJ\rpc\spi\SpiLoader.class
+com\TJJ\rpc\config\RegistryConfig.class
 com\TJJ\rpc\serializer\KryoSerializer.class
 com\TJJ\rpc\model\RpcRequest$RpcRequestBuilder.class
 com\TJJ\rpc\serializer\SerializerKeys.class
 com\TJJ\rpc\server\HttpServerHandler.class
 com\TJJ\rpc\server\VertxHttpServer.class
+com\TJJ\rpc\registry\Registry.class
+com\TJJ\rpc\registry\EtcdRegistry.class
+com\TJJ\rpc\model\ServiceMetaInfo.class
 com\TJJ\rpc\serializer\SerializerFactory.class
 com\TJJ\rpc\config\RpcConfig.class
 com\TJJ\rpc\RpcApplication.class
@@ -20,4 +25,5 @@ com\TJJ\rpc\proxy\ServiceProxy.class
 com\TJJ\rpc\proxy\ServiceProxyFactory.class
 com\TJJ\rpc\serializer\Serializer.class
 com\TJJ\rpc\serializer\JdkSerializer.class
+com\TJJ\rpc\registry\RegistryKeys.class
 com\TJJ\rpc\server\HttpServer.class
