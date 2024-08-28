@@ -64,4 +64,13 @@ public class RegistryTest {
         List<ServiceMetaInfo> serviceMetaInfoList = registry.serviceDiscovery(serviceKey);
         Assert.assertNotNull(serviceMetaInfoList);
     }
+
+    @Test
+    public void heartBeat() throws Exception {
+        //到etcd的可视化界面观察节点的TTL
+        register();
+        //通过阻塞的方式让register.init中的心跳检测程序不断运行
+        //一旦阻塞时间到了，现成就会被删除，init中的心跳检查就不再执行
+        Thread.sleep(60*1000L);
+    }
 }

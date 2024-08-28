@@ -22,7 +22,7 @@ import java.lang.reflect.Method;
 public class HttpServerHandler  implements Handler<HttpServerRequest> {
     @Override
     public void handle(HttpServerRequest request) {
-        System.out.println("前端开始处理请求");
+        System.out.println("后端开始处理前端请求");
         // 指定序列化器
         final Serializer serializer = SerializerFactory.getInstance(RpcApplication.getRpcConfig().getSerializer());
         // 记录日志

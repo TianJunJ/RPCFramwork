@@ -20,6 +20,11 @@ public class RpcConfig {
     private String version = "3.1";
 
     /**
+     * 角色(生产者或者是消费者)
+     */
+    private String role;
+
+    /**
      * 服务器主机名
      */
     private String serverHost = "localhost";
@@ -43,5 +48,7 @@ public class RpcConfig {
      * 注册中心配置
      */
     private RegistryConfig registryConfig = new RegistryConfig();
+
+
 
 }

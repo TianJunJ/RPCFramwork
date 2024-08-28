@@ -7,6 +7,7 @@ com\TJJ\rpc\config\RegistryConfig.class
 com\TJJ\rpc\serializer\KryoSerializer.class
 com\TJJ\rpc\model\RpcRequest$RpcRequestBuilder.class
 com\TJJ\rpc\serializer\SerializerKeys.class
+com\TJJ\rpc\registry\EtcdRegistry$1.class
 com\TJJ\rpc\server\HttpServerHandler.class
 com\TJJ\rpc\server\VertxHttpServer.class
 com\TJJ\rpc\registry\Registry.class
@@ -26,4 +27,5 @@ com\TJJ\rpc\proxy\ServiceProxyFactory.class
 com\TJJ\rpc\serializer\Serializer.class
 com\TJJ\rpc\serializer\JdkSerializer.class
 com\TJJ\rpc\registry\RegistryKeys.class
+com\TJJ\rpc\registry\RegistryServiceCache.class
 com\TJJ\rpc\server\HttpServer.class

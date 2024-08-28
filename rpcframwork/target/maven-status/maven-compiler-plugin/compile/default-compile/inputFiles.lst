@@ -10,6 +10,7 @@ E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\model\RpcRequest.jav
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\registry\EtcdRegistry.java
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\App.java
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\serializer\SerializerKeys.java
+E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\registry\RegistryServiceCache.java
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\config\RegistryConfig.java
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\proxy\MockServiceProxy.java
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\proxy\ServiceProxyFactory.java
@@ -19,6 +20,7 @@ E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\serializer\KryoSeria
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\RpcApplication.java
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\server\HttpServer.java
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\server\HttpServerHandler.java
+E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\registry\RegistryTest.java
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\utils\ConfigUtils.java
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\serializer\JdkSerializer.java
 E:\GitHub\RPCFramwork\rpcframwork\src\main\java\com\TJJ\rpc\model\ServiceMetaInfo.java
